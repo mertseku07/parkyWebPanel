@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Parky - Contact Us</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href='https://css.gg/arrow-up.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Link for icons (ege) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="parkinglots.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- CSS link -->
+    <link rel="icon" type="image/png" href="parkylogo4.png">
+    <link rel="stylesheet" href="main.css">
+    <link href='https://css.gg/arrow-up.css' rel='stylesheet'>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="contactus.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+      
+     <!--NAVBAR BAŞLANGIÇ.-->
+
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-light" style="background-color: #64a8f5;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="main.html"><img src="parkylogo4.png" width="55" height="70" class="rounded-pill" alt=""> Parky
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"  href="user.html" >Homepage </a>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page"  href="parkinglots.html" >Add Your Parking Lot </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="contactus.html">Contact Us</a>
+                </li>
+                
+                
+            </ul>
+            </div>
+        </div>
+        <a class="nav-item mr-3 nav-link p-2" href="login.html" style="background-color: #ffffff">Logout</a>
+    
+    
+</nav>
+<!--NAVBAR BİTİŞİ.-->
+
+   
+    <!-- contact us form (ege) -->
+    <!-- Contact -->
+    
+ 
+                    
+
+    <div class="contactus" >
+        <h2>Contact</h2>
+        <p>Give feedback about your Parky exprerience!</p>
+        <i class="fa fa-map-marker" style="width:30px"></i> Antalya, Turkey<br>
+        <i class="fa fa-phone" style="width:30px"></i> +90 242 245 00 00<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> info@parky.com<br>
+        <form name="form1" onsubmit="return false">
+            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" name="Name"></p>
+            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" name="Email"></p>
+            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" name="Message" style="height:100px"></p>
+            <p><button onclick="clickfunc()" class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
+        </form>
+
+        <div class="icons">
+            <!-- Icons -->
+            <h2>You can find us at </h2>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <b href="#"><i class="fa fa-twitter"></i></b>
+            <c href="#"><i class="fa fa-linkedin"></i></c>
+            <d href="#"><i class="fa fa-google-plus"></i></d>
+            <e href="#"><i class="fa fa-instagram"></i></e>
+        </div>
+    </div>
+    <!--
+    <div class="mapouter">
+        <div class="gmap_canvas">
+            <iframe width="900" height="261" id="gmap_canvas" src="https://maps.google.com/maps?q=antalya%20bilim&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+            </iframe>
+            <br>
+        </div>
+    </div>
+-->
+    <script src="scripts.js"></script>
+
+
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Footer (Ege) -->
+ <footer class="footer">
+    <div class="footer-left col-md-4 col-sm-6">
+        <!-- Left part of footer -->
+        <p class="about">
+            <span> You can find us at</span>
+        </p>
+
+        <div class="icons">
+            <!-- Icons -->
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="footer-center col-md-4 col-sm-6">
+        <!-- Center part of footer -->
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span> Ciplakli, Dosemealtı</span> Antalya, Turkey</p>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <p> +90 242 245 00 00</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="#"> info@parky.com</a></p>
+        </div>
+    </div>
+    <div class="footer-right col-md-4 col-sm-6">
+        <!-- Right part of footer -->
+        <img src="parkylogo4.png" width="75" height="100" class="rounded-pill">
+        <p class="menu">
+            <a href="login.html"> Login</a> |
+            <a href="main.html"> Create an account</a> |
+            <a href="contactus.html"> Contact Us</a>
+        </p>
+        <p class="name"> Parky &copy; 2022</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+    <script>
+        //https://sweetalert2.github.io
+        function clickfunc() {
+
+            var emptyname = document.forms["form1"]["Name"].value;
+            var emptymail = document.forms["form1"]["Email"].value;
+            var emptymessage = document.forms["form1"]["Message"].value;
+            if (emptyname == "" || emptymail == "" || emptymessage == "") {
+                Swal.fire(
+                    'Error!', //Title
+                    'Please fill the required parts', //text
+                    'error' //button type
+                )
+            } else {
+                Swal.fire(
+                    'Success!', //Title
+                    'We will respond to your inquiry as fast as we can', //text
+                    'success' //button type
+                )
+
+            }
+
+
+        }
+    </script>
+    <script src="scripts.js"></script>
+    </body>
+
+
+</html>

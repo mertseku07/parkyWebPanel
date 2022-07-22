@@ -1,0 +1,426 @@
+body {
+    overflow-x: hidden;
+}
+#map{
+    height: 40%;
+    width: 50%;
+    margin: 5rem auto;
+}
+
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background-color: #282d32;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+img.ri {
+    display: block;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+@media only screen and (max-width: 480px) {
+    img.ri {
+        display: block;
+        width: 40%;
+        margin-left: 40%;
+        margin-top: 10%;
+    }
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 0;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 10px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-left: -250px;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #312A25;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 220px;
+    }
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+    #sidebar-wrapper {
+        width: 220px;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        width: 40px;
+    }
+    #wrapper.toggled span {
+        visibility: hidden;
+    }
+    #wrapper.toggled i {
+        float: right;
+    }
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+@media(max-width:414px) {
+    #wrapper.toggled #page-content-wrapper {
+        position: absolute;
+        margin-right: 0px;
+    }
+    #wrapper.toggled {
+        padding-right: 0px;
+    }
+    #wrapper {
+        padding-left: 20px;
+    }
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+    #sidebar-wrapper {
+        width: 50px;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        width: 140px;
+    }
+    #wrapper.toggled span {
+        visibility: visible;
+        position: relative;
+        left: 70px;
+        bottom: 13px;
+    }
+    #wrapper span {
+        visibility: hidden;
+    }
+    #wrapper.toggled i {
+        float: right;
+    }
+    #wrapper i {
+        float: right;
+    }
+    #page-content-wrapper {
+        padding: 5px;
+        position: relative;
+    }
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+
+/*!
+ *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+@-webkit-keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg)
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto
+}
+
+.gradient-custom-3 {
+    /* fallback for old browsers */
+    background: #84fab0;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(132, 250, 176, 0.5), rgba(143, 211, 244, 0.5))
+}
+
+.gradient-custom-4 {
+    /* fallback for old browsers */
+    background: #84fab0;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+}
+
+/*FOOTER CSS (EGE)*/
+
+.footer {
+    background-color: #474e5d;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+ }
+ 
+ .footer .footer-left,
+ .footer .footer-center,
+ .footer .footer-right {
+    display: inline-block;
+    vertical-align: top;
+ }
+ /* footer left*/
+ 
+ .footer .footer-left {
+    width: 33%;
+    padding-right: 15px;
+    padding-top: 30px;
+ }
+ 
+ .footer .about span {
+    /*About the company style*/
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+ }
+ 
+ .footer .icons {
+    margin-top: 5px;
+ }
+ 
+ .footer .icons a {
+    /*icon backgrounds.*/
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    /*icon köşe*/
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    /*icon aralık*/
+    margin-bottom: 5px;
+ }
+ /* footer center*/
+ 
+ .footer .footer-center {
+    width: 30%;
+ }
+ 
+ .footer .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    /*phone and location icon size*/
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+ }
+ 
+ .footer .footer-center i.fa-envelope {
+    font-size: 17px;
+    /*mail size*/
+    line-height: 38px;
+ }
+ 
+ .footer .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+ }
+ 
+ .footer .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 16.5px;
+    line-height: 2;
+ }
+ 
+ .footer .footer-center p a {
+    color: #0099ff;
+    text-decoration: none;
+ }
+ /* footer right*/
+ 
+ .footer .footer-right {
+    width: 35%;
+ }
+ 
+ .footer h2 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: normal;
+    margin: 0;
+ }
+ 
+ .footer h2 span {
+    color: #0099ff;
+ }
+ 
+ .footer .menu {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+ }
+ 
+ .footer .menu a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+ }
+ 
+ .footer .menu a:hover {
+    color: #0099ff;
+ }
+ 
+ .footer .name {
+    color: #0099ff;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+ }
+ 
+ @media (max-width: 767px) {
+    .footer {
+        font-size: 14px;
+    }
+    .footer .footer-left,
+    .footer .footer-center,
+    .footer .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer .footer-center i {
+        margin-left: 0;
+    }
+ }
